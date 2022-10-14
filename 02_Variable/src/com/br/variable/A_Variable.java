@@ -67,13 +67,13 @@ public class A_Variable {
 		 *   [표현법] 변수명 = 값;
 		 *   
 		 *   > 변수 선언과 동시에 대입
-		 *   [표현법] 자료형 변수명 = 값;
+		 *   [표현법] 자료형 변수명 = 값; -> 초기화
 		 *   
 		 */
 		
 		//--- 자료형 종류---
 		// 1. 논리형 (논리값 = true/false)
-		//boolean bool;  // 선언 후 와진짜 졸리다
+		//boolean bool;  // 선언 후 
 		//bool = true; // 대입
 		boolean bool = true; // 변수 선언과 동시에 초기화
 		
