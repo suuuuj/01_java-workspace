@@ -6,7 +6,8 @@ public class Run {
 		VariablePractice a = new VariablePractice();
 		//a.method1();
 		//a.method2();
-		a.method3();
+		//a.method3();
+		a.method4();
 	}
 
 }

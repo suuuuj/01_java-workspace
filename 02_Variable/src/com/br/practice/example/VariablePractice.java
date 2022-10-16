@@ -55,5 +55,13 @@ public class VariablePractice {
 				
 	}
 	
+	public void method4() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("문자열을 입력하세요 : ");
+		char ch1 = sc.nextLine().charAt(0);
+	
+		
+	}
 	
 }
