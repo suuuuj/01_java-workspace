@@ -31,6 +31,8 @@ public class B_ValuePrint { // com.br.first.B_ValuePrint -> 풀클래스명
 		// 4. 연산한 결과 값도 출력
 		System.out.println(123 + 456);
 		System.out.println(1.23 - 0.12);  //실수값은 불안정해서 오차생길 수 있음
+		double num = (1.23 - 0.12);
+		System.out.println(num);
 		
 		// 5. 문자(한글자)와 숫자간의 연산 가능
 		System.out.println('a' + 1); // 문자에는 컴퓨터가 인식하는 각각의 고유한 숫자가 존재

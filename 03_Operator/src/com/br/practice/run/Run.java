@@ -1,4 +1,4 @@
-package com.br.ptactice.run;
+package com.br.practice.run;
 import com.br.practice.example.OperatorPractice;
 public class Run {
 	
@@ -8,7 +8,11 @@ public class Run {
 		//o.practice2();
 		//o.practice3();
 		//o.practice4();
-		o.practice5();
+		//o.practice5();
+		//o.practice6();
+		//o.practice7();
+		o.practice8();
 	}
+
 
 }

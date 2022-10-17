@@ -76,7 +76,50 @@ public class OperatorPractice {
 		
 		
 	}
+	public void practice6() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("나이 : ");
+		int age = sc.nextInt();
+		
+		String result = age <= 13 ? "어린이" : (age > 19 ? "성인" : "청소년");
+			
+		System.out.println("\n" + result);
+		
+	}
 	
+	public void practice7() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("국어 : ");
+		int korean = sc.nextInt();
+		
+		System.out.print("영어 : ");
+		int english = sc.nextInt();
+		
+		System.out.print("수학 : ");
+		int math = sc.nextInt();
+		
+		int total = korean + english + math ;
+		double average = total / 3.0;
+		
+		System.out.println("\n합계 : " + total);
+		System.out.println("평균 : " + average);
+		
+		String pass = korean >=40 && english >= 40 && math >= 40 && average >= 60 ? "합격" : "불합격";
+		
+		System.out.println(pass);
 	
+	}
+	
+	public void practice8() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("주민번호를 입력하세요(- 포함) : ");
+		char ch = sc.nextLine().charAt(7);
+		
+		String gender = ch % 2 == 0 ? "여자" : "남자";
+		System.out.println("\n" + gender);
+			
+	}
 
 }

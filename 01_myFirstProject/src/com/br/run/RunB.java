@@ -12,7 +12,7 @@ public class RunB {
 		B_ValuePrint b = new B_ValuePrint();
 		
 		// 2) 해당 클래스의 메소드 호출
-		//b.printValue();
+		b.printValue();
 		b.sumStringNumber();
 		
 	}
