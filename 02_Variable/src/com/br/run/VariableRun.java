@@ -18,7 +18,8 @@ public class VariableRun {
 		//b.inputScanner2();
 		//b.inputScanner3();
 		//b.practice();
-		b.practice2();
+		//b.practice2();
+		b.practice3();
 	
 		C_Printf c = new C_Printf();
 		//c.printfTest();

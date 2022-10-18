@@ -18,7 +18,8 @@ public class OperatorRun {
 		
 		D_Comparison d = new D_Comparison();
 		//d.method1();
-		//d.method2();
+	    //d.method2();
+	    d.method3();
 		
 		E_Logical e = new E_Logical();
 		//e.method1();
@@ -35,7 +36,7 @@ public class OperatorRun {
 		//f.method5();
 		
 		G_Compound g = new G_Compound();
-		g.method1();
+		//g.method1();
 		
 		
 		

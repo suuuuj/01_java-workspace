@@ -209,8 +209,27 @@ public class B_KeyboardInput {
 		System.out.println("할인율 : " + (int)(discountRate * 100)  + "%" );
 		System.out.println("등급 : " + grade + "급");
 		
+		
+		
 	}
 
+	public void practice3 ( ) { 
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("할인율 : ");  // 0.2
+		double dc = sc.nextDouble();
+		
+		System.out.println("할인율 : " + (int)(dc * 100)  + "%" );
+		
+		//System.out.println("할인율 : " + (int)dc * 100  + "%" );
+		// double dc=0.2 -> int dc = 0 여기에 100을 곱하니 0%가 뜨는 것!!!!
+		
+		
+		
+		
+	}
 	
 	
 }
+

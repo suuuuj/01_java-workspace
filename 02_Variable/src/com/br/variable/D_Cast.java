@@ -56,9 +56,10 @@ public class D_Cast {
 		//float이 실수형이라 long형보다 표현 가능한 수의 범위가 더 크기때문에 가능
 		
 		float f5 = /*(float)*/l3;
+		System.out.println(f5);  // 1000.0
 		
 		// 특이2. char(2byte) <--> int(4byte)
-		int num = '정';
+		int num = 'A';
 		char ch = 49352; // 각 문자들 마다 고유한 숫자(유니코드)가 지정되어 있기 때문에 쌍방향 형변환 가능 
 		              // 단 char에 음수값 저장 불가 --> 0~65535 범위안에 있는 것만 가능 
 		              // 아스키코드표 참고 유니코드는 너무 방대.
@@ -69,11 +70,13 @@ public class D_Cast {
 		
 	// 강제형변환
 		public void forceCasting() {
-	       // 강제형변환 : 큰 크기의 자료형을 작은 크기의 자료형으로 강제로 바꾸는 rjt
+	       // 강제형변환 : 큰 크기의 자료형을 작은 크기의 자료형으로 강제로 바꾸는 것
 			
 			// 1. double(8byte) --> float(4byte)
 			double d1 = 4.0;
-			float f1 = (float)d1;			
+			float f1 = (float)d1;		
+			
+			System.out.println(f1);
 			
 			// 2. double(8byte) ---> int(4byte)
 			int iNum = 10;

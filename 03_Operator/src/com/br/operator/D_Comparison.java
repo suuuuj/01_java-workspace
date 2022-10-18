@@ -59,6 +59,24 @@ public class D_Comparison {
 		
 	}
 	
+	// 위 문제 혼자 다시 해보기!
+	
+	public void method3() {
+		Scanner sc = new Scanner (System.in);
+		
+		System.out.print("첫 번째 정수 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("두 번째 정수 : ");
+		int num2 = sc.nextInt();
+		
+		System.out.println("첫 번째가 두 번째보다 큽니까? : " + (num1 > num2));
+		System.out.println("첫 번째 정수가 짝수입니까? : " + (num1 % 2 == 0));
+		System.out.println("두 번째 정수가 홀수 입니까? : " + !(num2 % 2 ==0));
+		System.out.println("두 번째 정수가 문자 \'A\'보다 작습니까? : " + (num2 < 'A'));
+		
+	}
+	
 	
 	
 }
