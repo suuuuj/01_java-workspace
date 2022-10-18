@@ -6,7 +6,7 @@ public class OperatorRun {
 		A_LogicalNegation a = new A_LogicalNegation();
 		
 		//a.method1();  // ctrl + f11 => 실행 단축키
-
+     
 		B_InDecrease b = new B_InDecrease();
 		
 		//b.method1();
@@ -19,7 +19,7 @@ public class OperatorRun {
 		D_Comparison d = new D_Comparison();
 		//d.method1();
 	    //d.method2();
-	    d.method3();
+	    //d.method3();
 		
 		E_Logical e = new E_Logical();
 		//e.method1();
