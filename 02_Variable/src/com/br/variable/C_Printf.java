@@ -28,7 +28,7 @@ public class C_Printf {
 		
 		System.out.println(iNum1 + ", " + iNum2);
 		
-		System.out.printf("%d, %d%%", iNum1, iNum2); // 문자 %를 쓰고 싶다면 %%를 쓰면 된다.
+		System.out.printf("%d, %d%%\n", iNum1, iNum2); // 문자 %를 쓰고 싶다면 %%를 쓰면 된다.
 		
 		System.out.printf("%d\n", iNum1, iNum2); // 첫번째 값만 출력	
 		// System.out.printf("%d %d\n", iNum1);  ->에러발생 값을 남게 쓰는건 되지만 부족하게 쓰면 에러발생
@@ -37,6 +37,7 @@ public class C_Printf {
 		System.out.printf("%5d\n", 250);
 		System.out.printf("%5d\n", 3000);
 		System.out.printf("%5d\n", 16);
+		System.out.printf("%5d\n", 500000);
 		
 	    double dNum1 = 1.23456789;
 	    double dNum2 = 4.53;

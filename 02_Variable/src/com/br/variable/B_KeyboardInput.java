@@ -99,7 +99,7 @@ public class B_KeyboardInput {
 		// 먼저 문자열로 읽어들인 후 특정 인덱스의 문자 하나만 추출    apple -> 각각을 인덱스라고 불림
 		                                             //01234 -> 각각의 자리
 		
-		// char gender = sc.nextLine(); -> 오류 자료형이 잘못되었기때뭄ㄴ
+		// char gender = sc.nextLine(); -> 오류 자료형이 잘못되었기때문
 		char gender = sc.nextLine().charAt(0); // ex) f->f  여자->여
 		// 문자열.charAt(뽑고자하는 인덱스);-> 해당 문자열로부터 해당 인덱스의 문자 하나를 추출   
 				
@@ -168,9 +168,47 @@ public class B_KeyboardInput {
 		System.out.println("가격 : " + price + "원");
 		System.out.println("제조국 : made in " + made);
 		System.out.println("할인율 : " + discount * 100 + "%");
-		// 20.0이 아닌 20%로 보여지길 원한다면 int(discount * 100) 해야함
+		// 20.0이 아닌 20%로 보여지길 원한다면 (int)(discount * 100) 해야함
 		System.out.println("등급 : " + grade + "급");	
 			
+	}
+	
+	
+	// 위에 문제 다시 해보기!
+	public void practice2 ( ) { 
+		// 사용자에게 등록하고자 하는 상품명 (String), 브랜드명(String), 가격(Int), 
+		// 제조국가 (String), 할인율(double), 등급(A~D)(char)
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("상품명 : ");
+		String name = sc.nextLine();
+		
+		System.out.print("브랜드명 : ");
+		String brand = sc.nextLine();
+		
+		System.out.print("가격 : ");
+		int price = sc.nextInt();
+		
+		sc.nextLine();
+		System.out.print("제조국가 : ");
+		String national = sc.nextLine();
+		
+		System.out.print("할인율 : ");
+		double discountRate = sc.nextDouble();
+		
+		
+		sc.nextLine();
+		System.out.print("등급 : ");
+		char grade = sc.nextLine().charAt(0);
+		
+		System.out.println("\n상품명 : " + name);
+		System.out.println("브랜드명 : " + brand);
+		System.out.println("가격 : " + price + "원");
+		System.out.println("제조국가 : made in " + national);
+		System.out.println("할인율 : " + (int)(discountRate * 100)  + "%" );
+		System.out.println("등급 : " + grade + "급");
+		
 	}
 
 	

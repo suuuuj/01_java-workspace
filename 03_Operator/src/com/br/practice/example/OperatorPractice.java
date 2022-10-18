@@ -21,12 +21,12 @@ public class OperatorPractice {
 		int num = sc.nextInt();
 		
 		String result = (num > 0 ? "양수다" :(num == 0 ? "0이다" : "음수다"));
-		System.out.println("\n" + result);
+		System.out.println(result);
 	}
 	
 	public void practice3() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("정수 : ");
+		System.out.print("\n" + "정수 : ");
 		int num = sc.nextInt();
 		
 		String result = num % 2 == 0 ? "짝수다" : "홀수다";
@@ -55,10 +55,10 @@ public class OperatorPractice {
 		String name = sc.nextLine();
 		
 		System.out.print("학년(숫자만) : ");
-		int level = sc.nextInt();
+		int grade = sc.nextInt();
 		
 		System.out.print("반(숫자만) : ");
-		int room = sc.nextInt();
+		int classNum = sc.nextInt();
 		
 		System.out.print("번호(숫자만) : ");
 		int num = sc.nextInt();
@@ -68,12 +68,13 @@ public class OperatorPractice {
 		char gender = sc.nextLine().charAt(0);
 		
 		System.out.print("성적(소수점 아래 둘째 자리까지) : ");
-		double grade = sc.nextDouble();
+		double score = sc.nextDouble();
 		
-		String result = gender == 'M' || gender == 'm' ? "남학생" : "여학생";
+		//String result = gender == 'M' || gender == 'm' ? "남학생" : "여학생";
+		char result = (gender == 'M' || gender == 'm' ? '남' : '여');
 		
-		System.out.printf("\n%d학년 %d반 %d번 %s %s의 성적은 %.2f이다.", level, room, num, name, result, grade);
-		
+		System.out.printf("\n%d학년 %d반 %d번 %s %s학생의 성적은 %.2f이다.", grade, classNum, num, name, result, score);
+		                            // String 사용했을 경우 %s의
 		
 	}
 	public void practice6() {
@@ -101,23 +102,29 @@ public class OperatorPractice {
 		int math = sc.nextInt();
 		
 		int total = korean + english + math ;
-		double average = total / 3.0;
+		double average = total / 3.0; // int / int(3.0이 아닌 3) 를 하게 되면 그 결과 값이 int로 받게 되어 몫만 출력되고 소수점 표현이 어려워짐
 		
 		System.out.println("\n합계 : " + total);
 		System.out.println("평균 : " + average);
 		
 		String pass = korean >=40 && english >= 40 && math >= 40 && average >= 60 ? "합격" : "불합격";
-		
 		System.out.println(pass);
 	
+		// pass 변수 만들지 않고 바로 출력한다면?
+		//System.out.println(korean >=40 && english >= 40 && math >= 40 && average >= 60 ? "합격" : "불합격");
+		
 	}
 	
 	public void practice8() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("주민번호를 입력하세요(- 포함) : ");
-		char ch = sc.nextLine().charAt(7);
+		char ch = sc.nextLine().charAt(7); // '1' '2' '3' '4' 숫자의 모양을 하고 있어도 엄연한 문자임
 		
-		String gender = ch % 2 == 0 ? "여자" : "남자";
+		//String gender = ch % 2 == 0 ? "여자" : "남자";  -> ch는 문자이기때문에 문자와 숫자의 연산이 된것. 운좋게 맞은거지 부적절한 표현임.
+		
+		String gender = (ch == '1' || ch == '3' ? "남자" : "여자");
+		// 또는 해당 문자에 대한 숫자를 입력 String gender = (ch == 49 || ch == 51 ? "남자" : "여자");
+		
 		System.out.println("\n" + gender);
 			
 	}

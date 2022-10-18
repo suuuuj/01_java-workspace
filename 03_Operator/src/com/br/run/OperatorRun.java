@@ -32,7 +32,14 @@ public class OperatorRun {
 		//f.method2();
 		//f.method3();
 		//f.method4();
-		f.method5();
+		//f.method5();
+		
+		G_Compound g = new G_Compound();
+		g.method1();
+		
+		
+		
+		
 	}
 	
 

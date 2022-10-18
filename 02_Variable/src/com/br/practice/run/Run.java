@@ -4,10 +4,10 @@ public class Run {
 	
 	public static void main (String[] args) {
 		VariablePractice a = new VariablePractice();
-		//a.method1();
+		a.method1();
 		//a.method2();
 		//a.method3();
-		a.method4();
+		//a.method4();
 	}
 
 }
