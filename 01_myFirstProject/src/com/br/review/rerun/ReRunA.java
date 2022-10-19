@@ -1,4 +1,4 @@
-package com.br.review.reRun;
+package com.br.review.rerun;
 import com.br.review.reFirst.Re_A_MethodPrinter;
 public class ReRunA {
 	
