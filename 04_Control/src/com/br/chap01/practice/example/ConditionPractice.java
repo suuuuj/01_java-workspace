@@ -281,7 +281,7 @@ public class ConditionPractice {
 		System.out.println("새pc에 작성한 코드");
 	}
 	public void 집에서올린메소드(){
-		System.out.pruntln("집에서올린코드");	
+		System.out.println("집에서올린코드");	
 	}	
 
 	
