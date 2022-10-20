@@ -277,5 +277,9 @@ public class ConditionPractice {
 		}
 	}
 	
+	public void 집에서올린메소드(){
+		System.out.pruntln("집에서올린코드");	
+	}	
+
 	
 }
