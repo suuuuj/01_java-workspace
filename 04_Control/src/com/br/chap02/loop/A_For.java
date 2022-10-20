@@ -254,7 +254,9 @@ public class A_For {
 		System.out.println("문자열의 마지막인덱스 수 : " + (str.length() - 1));
 		
 		//0번 인덱스 ~ 마지막 인덱스 (문자열길이-1) 까지 매번 1씩 증가하는 동안 반복
+		
 		//for(int i=0 ; i<=str.length()-1; i++ ) {
+		
 		for(int i=0; i< str.length(); i++) {   //i<=str.length() 라고 쓰지 않도록 조심!
 			System.out.println(str.charAt(i));
 		}
@@ -441,8 +443,17 @@ public class A_For {
 		// ex) "banana", 'a' 입력시 --> 3  /'n'--> 2    //hint : 임의의 변수가 하나더 필요,,,
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.print("문자열을 입력하세요 : ");
-		String str = sc.nextLine();
+		
+		System.out.print("문자열을 입력하세요 : ");  
+		String str = sc.nextLine();  //banana
+		                           
+		//System.out.print("입력한 문자열의 문자 개수 : " + str.length()); // 6 (인덱스 수: 5) ->반복돌릴 수
+		
+		
+		
+		for(int i = 0 ; i < (str.length()) ;i++ ) {
+			System.out.println(i + "=" + str.charAt(i));
+		}
 		
 		
 		

@@ -21,7 +21,8 @@ public class LoopRun {
 		//a.method14();
 		//a.method15();
 		//a.method16();
-		a.method17();
+		//a.method17();
+		a.method18();
 		
 	}
 	

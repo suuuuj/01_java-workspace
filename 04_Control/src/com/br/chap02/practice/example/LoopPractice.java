@@ -100,9 +100,65 @@ public class LoopPractice {
 	
 	// 실습문제8
 	public void practice8() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자 : ");
+		int dan = sc.nextInt();
+		
+		System.out.println("==== " + dan + "단 ====");
+		
+		for(int i = 1 ; i <= 9 ; i++) {
+			System.out.printf("%d * %d = %d\n",dan, i, dan*i);
+		}
+			
+	}
+	
+	// 실습문제9
+	public void practice9() {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("숫자 : ");
+		int dan = sc.nextInt();
+		
+		if(dan>=2 && dan<=9) {
+			for(int i = dan; i<=9 ; i++) {
+				System.out.println("==== " + i + "단 ====");
+				for (int j=1; j<=9;j++) {
+					System.out.printf("%d * %d = %d\n",i, j, i*j );
+				
+				}
+				
+			}
+		
+		}else {
+			System.out.println("2~9 사이의 숫자만 입력해주세요.");
+		}
+		
+	}
+	
+	// 실습문제10
+	public void practice10() {
 		
 	}
 	
 	
+	// 실습문제11
+	public void practice11() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("시작 숫자 : ");
+		int s = sc.nextInt();
+		
+		System.out.print("공차 : ");
+		int gap = sc.nextInt();
+		
+		int sum = 0;
+		for (int i = 1 ; i <=10 ; i++ ) {
+			sum = s + gap * (i-1);
+			System.out.print(sum + " ");
+		} 
+		
+//		for(int i = s ; i <=(s + 9*gap) ; i+=gap) {
+//			System.out.print(i + " ");
+		
+	}
 
 } //끝

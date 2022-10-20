@@ -8,10 +8,10 @@ public class Run {
 		//l.practice2();
 		//l.practice3();
 		//l.practice4();
-		//l.practice5();
+		l.practice5();
 		//l.practice6();
 		//l.practice7();
-		l.practice8();
+		//l.practice8();
 		//l.practice9();
 		//l.practice10();
 		//l.practice11();
