@@ -277,5 +277,8 @@ public class ConditionPractice {
 		}
 	}
 	
+	public void 현재pc에서만든메소드() {
+		System.out.println("새pc에 작성한 코드");
+	}
 	
 }
