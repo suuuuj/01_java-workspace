@@ -25,6 +25,25 @@ public class LoopPractice {
 	// 실습문제2
 	public void practice2() {
 		
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			
+			System.out.print("1 이상의 숫자를 입력하세요. : ");
+			int num = sc.nextInt();
+			
+			if(num>0) {
+				for(int i=1; i<=num;i++) {
+				
+					System.out.print(i + " ");
+					
+				} break;
+				
+			}else {
+					System.out.println ("잘못 입력했습니다.");
+				}
+		}
+	
 	}
 	
 	// 실습문제3
@@ -46,7 +65,20 @@ public class LoopPractice {
 	
 	// 실습문제4
 	public void practice4() {
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("1 이상의 숫자를 입력하세요. : ");
+			int num = sc.nextInt();
 			
+			if(num>=1) {
+				for(int i = num ; i>=1 ; i--) {
+					System.out.print(i + " ");
+				} break;					
+			} else {
+				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
+			}
+		}
 	}
 	
 	// 실습문제5 - 겁내 오래걸림...
@@ -98,6 +130,34 @@ public class LoopPractice {
 		
 	}
 	
+	// 실습문제7
+	public void practice7() {
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.print("첫 번째 숫자 : ");
+			int num1 = sc.nextInt();
+			System.out.print("두 번째 숫자 : ");
+			int num2 = sc.nextInt();
+			
+			if(num1>0 && num2>0) {
+				if(num1>num2) {
+					for(int i = num2 ; i<=num1; i++) {
+						System.out.print(i + " ");
+					} break;
+					
+				}else {
+					for(int j = num1 ; j<=num2 ; j++) {
+						System.out.print(j + " ");
+					}break;
+				}
+				
+			}else {
+				System.out.print("1 이상의 숫자를 입력해주세요.\n");
+			}
+		}
+	}
+	
 	// 실습문제8
 	public void practice8() {
 		Scanner sc = new Scanner(System.in);
@@ -136,6 +196,28 @@ public class LoopPractice {
 	
 	// 실습문제10
 	public void practice10() {
+		Scanner sc = new Scanner(System.in);
+		while(true) {
+			System.out.print("숫자 : ");
+			int dan = sc.nextInt();
+			
+			if(dan>=2 && dan<=9) {
+			
+				for(int i = dan ; i <=9 ; i++) {
+				
+					System.out.println("==== " + i + "단 ====");
+					
+					for(int su = 1 ; su <=9 ; su++) {
+						System.out.printf("%d x %d = %d\n",i ,su, i*su);
+					}
+				
+				}
+			}else {
+				System.out.print("2~9사이의 숫자만 입력해주세요\n");
+			}
+			
+		}
+		
 		
 	}
 	
@@ -158,6 +240,24 @@ public class LoopPractice {
 		
 //		for(int i = s ; i <=(s + 9*gap) ; i+=gap) {
 //			System.out.print(i + " ");
+		
+	}
+	
+	// 실습문제12
+	public void practice12() {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("연산자(+, -, *, /, %) : ");
+		String str = sc.nextLine();
+		
+		System.out.print("정수1 : ");
+		int num1 = sc.nextInt();
+		
+		System.out.print("정수2 : ");
+		int num2 = sc.nextInt();
+		
+		
+		
 		
 	}
 

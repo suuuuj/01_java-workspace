@@ -286,16 +286,22 @@ public class A_For {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("단 수 (2~9)를 입력 : ");
-		int dan = sc.nextInt();
+		while(true) {
 		
-		if(dan>=2 && dan<=9) {
-			for(int su=1 ;su<=9; su++) {
-				System.out.printf("%d x %d = %d\n", dan, su, dan*su );
-			}
-		}else {
-			System.out.println("2~9사이의 숫자를 입력해 주세요.");
-		}
+			System.out.print("단 수 (2~9)를 입력 : ");
+	
+			int dan = sc.nextInt();
+			
+		    if(dan>=2 && dan<=9) {//잘 입력했을 경우 -> 해당 단 출력 -> 반복문 빠져나감
+			    for(int su=1 ;su<=9; su++) {
+				      System.out.printf("%d x %d = %d\n", dan, su, dan*su );
+			    }
+			    break;
+		    }else {
+			     System.out.println("2~9사이의 숫자를 입력해 주세요.");
+		    }
+	    } 
+		System.out.println("프로그램을 종료합니다.");
 	}
 	
 	public void method12() {
@@ -446,16 +452,18 @@ public class A_For {
 		
 		System.out.print("문자열을 입력하세요 : ");  
 		String str = sc.nextLine();  //banana
-		                           
-		//System.out.print("입력한 문자열의 문자 개수 : " + str.length()); // 6 (인덱스 수: 5) ->반복돌릴 수
-		
-		
-		
+		System.out.print("찾고자 하는 문자 : "); // 어차피 한개 입력할테니
+		char ch = sc.nextLine().charAt(0); // 여기서는 charAt(0) 입력
+		   
+		int count = 0;
+								//6(5)
 		for(int i = 0 ; i < (str.length()) ;i++ ) {
-			System.out.println(i + "=" + str.charAt(i));
+			if (str.charAt(i) == ch) {       // banana 의 i번째 문자 == 사용자가 궁금해하는 문자
+				count++;
+			}
 		}
 		
-		
+		System.out.println("포함된 개수 : "+count);
 		
 	}
 	
