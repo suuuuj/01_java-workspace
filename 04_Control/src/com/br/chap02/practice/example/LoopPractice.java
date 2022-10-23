@@ -247,14 +247,58 @@ public class LoopPractice {
 	public void practice12() {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("연산자(+, -, *, /, %) : ");
-		String str = sc.nextLine();
+		while(true) {
+			
+//			System.out.print("연산자(+, -, *, /, %) : ");
+//			String str = sc.nextLine();
+//			
+//			System.out.print("정수1 : ");
+//			int num1 = sc.nextInt();
+//			
+//			System.out.print("정수2 : ");
+//			int num2 = sc.nextInt();
+//			
+//			if(!str.equals("exit")) {
+//				if (str.equals("+")) {
+//					System.out.println("num1 + num2 = " + (num1+num2));
+//				}else if (str.equals("-")) {
+//					System.out.println("num1 - num2 = " + (num1-num2));
+//				}else if (str.equals("*")) {
+//					System.out.println("num1 * num2 = " + (num1*num2));
+//				}else if (str.equals("/")&& num2 == 0 ) {
+//					System.out.println("num1 + num2 = " + (num1+num2));
+//				}else 
+//							
+//			}else {
+//				System.out.println("프로그램을 종료합니다.");
+//			}
+			
+			
+			
+			
+			
+			
+			
+			
+//			if(str.equals("exit")) {
+//				 System.out.println("프로그램을 종료합니다.");
+//			}else {
+//				if(str.equals("+")||str.equals("-")||str.equals("*")||str.equals("/")||str.equals("%")) {
+//					
+//					if((str.equals("/")||str.equals("%")) && num2 == 0) {
+//						System.out.println("0으로 나눌 수 없습니다. 다시 입력해주세요.");						
+//					}
+//				}else {
+//					System.out.println("없는 연산자 입니다. 다시 입력해주세요.");
+//				}
+//								
+//			}//exit 아닐때
+			
+		}
 		
-		System.out.print("정수1 : ");
-		int num1 = sc.nextInt();
 		
-		System.out.print("정수2 : ");
-		int num2 = sc.nextInt();
+		
+		
 		
 		
 		

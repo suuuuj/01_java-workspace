@@ -36,7 +36,7 @@ public class OperatorRun {
 		//f.method5();
 		
 		G_Compound g = new G_Compound();
-		//g.method1();
+		g.method1();
 		
 		
 		

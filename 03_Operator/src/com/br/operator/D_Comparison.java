@@ -20,7 +20,7 @@ public class D_Comparison {
 		int a = 10;
 		int b = 25;
 		
-		System.out.println("a == b : " + (a == b));  // 산술연산자가 비교연산자가 우선순위가 더 높기 때문에
+		System.out.println("a == b : " + (a == b));  // 산술연산자가  비교연산자보다 우선순위가 더 높기 때문에
 		System.out.println("a <= b : " + (a <= b));
 		
 		boolean result = a > b; 
