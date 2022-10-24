@@ -17,7 +17,7 @@ public class LoopRun {
 		//a.method10();
 		//a.method11();
 		//a.method12();
-		a.method13();
+		//a.method13();
 		//a.method14();
 		//a.method15();
 		//a.method16();
@@ -33,7 +33,7 @@ public class LoopRun {
 		//b.method6();
 		//b.method7();
 		//b.method8();
-		//b.method9();
+		b.method9();
 		
 	
 	}

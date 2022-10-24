@@ -103,7 +103,8 @@ public class A_Array {
 		 * 실제 리터럴값을 곧바로 담을 수 있는 변수를 일반 변수라고 얘기하고
 		 * 주소값을 담고있는 변수는 참조변수(레퍼런스 변수)라고 표현
 		 * 
-		 * 기본 ,(boolean, byte short , int, long, char, float, double"
+		 * 기본자료형(boolean, byte short , int, long, char, float, double)으로 선언된 변수
+		 * -> 실제 리터럴 값을 바로 담는 변수 => 일반 변수
 		 * 그 외 자료형(int[], double[], char[], short[] ... String, Scanner ,,,)
 		 * -> 주소값을 담는 변수 -> 참조변수(레퍼런스 변수)
 		 * 
@@ -226,56 +227,52 @@ public class A_Array {
 
 	}
 
+	//---------------------------------------------------------------------
+	
 	public void method7() {
 		// 1. 크기 10짜리 정수 배열 생성
 		
 		int[] arr = new int[10];
-		
-		//2. 반복문을 활용해서 0버ㅓㄴ ~마지막 인덴스까지 순차적으로 접근하면서 값을 대입
-				//   매번 1~100 사이에 발생되는 랜덤값
-		for(int i=0 ; i<arr.length;i++) {
-			arr[i] = (int)(Math.random()*100 + 1);
 			
+		
+		//2. 반복문을 활용해서 0번 ~마지막 인덴스까지 순차적으로 접근하면서 값을 대입
+		//   매번 1~100 사이에 발생되는 랜덤값
+		for(int i = 0 ; i<arr.length ; i++) {
+			arr[i] = (int)(Math.random()*100 +1);
 		}
 		
 		//3. 반복문을 활용해서 0번~마지막 인덱스까지 담겨있는 값 출력
-			//   arr[xx] 형식대로 출력
-
-		for(int i = 0; i<arr.length;i++) {
-			System.out.println("arr[" + i + "] : " + arr [i]);
+		//   arr[x] : xx 형식대로 출력
+		for(int i = 0; i<arr.length ; i++) {
+			System.out.println("arr["+i+"] : " + arr [i]);
 		}
-	
+
 	}
 	
 	public void method8 () {
 		// 1. 사용자에게 배열의 길이 입력받은 후
-		//    해당 그 크기만큼의 분자열 배열 생성
-	
-		
-		
+		//    해당 그 크기만큼의 문자열 배열 생성
 		Scanner sc = new Scanner(System.in);
 		
-				System.out.print("배열의 길이 : ?");
-				int size = sc.nextInt();
-				
-				String[] arr = new String[size];
+		System.out.print("배열의 길이 : ");
+		int size = sc.nextInt();
+		sc.nextLine();
+		
+		String[] arr = new String[size]; //size에 배열의 길이(마지막 수)가 들어가니까
+		
 	
-		// 2. 반복문을 활용해서 매번 사용자에게 과일명 입력받아 그 값을 매 인덱스 자리에 대입(0~마지막 인덱스 까지 )
+		// 2. 반복문을 활용해서 매번 사용자에게 과일명 입력받아 그 값을 매 인덱스 자리에 대입 (0~마지막 인덱스 까지 )
+		
+		for(int i = 0 ; i<arr.length /*size*/ ; i++) {
+			System.out.print("좋아하는 과일명 입력 : ");
+			arr[i] = sc.nextLine();
+		}
 				
-				for(int i=0; i<arr.length; i++) {
-					System.out.print("좋아하는 과일명 입력 : ");
-					arr[i] = sc.nextLine();
-					
 		// 3 .반복문을 활용해서 각 인덱스에 담긴 값 출력
-				//for(int i=0; i<arr.length; i++) {
-				//	System.out.println(arr[i]);
-					
-				}
-					
-			
-				
-				
-				
+		for(int i = 0; i<arr.length ; i++) {
+			System.out.println(arr[i]);
+		}
+		
 	}
 	
 	public void method9() {
@@ -317,7 +314,7 @@ public class A_Array {
 	
 	public void method10() {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("키 입력 : ");
+		
 		
 		// 1. 크기 3짜리 실수형 배열 만들기
 		
@@ -325,32 +322,26 @@ public class A_Array {
 		
 		
 		// 2. 각 인덱스에 사용자가 입력한 키 값 대입
-		
-		
 		for(int i=0; i<arr.length;i++) {
-			
+			System.out.print("키 입력 : ");
 			arr[i] = sc.nextDouble();
-			
 		}
-		
-		
-		
 		
 		//3. 각 인덱스에 담겨있는 값 출력
 		//		1번 학생의 키 : xx.xcm
 		//      2번 학생의 키 : xx.xcm
 		//      3번 학생의 키 : xx.xcm
+		
 		double sum = 0.0;
+		
 		for(int i = 0;i<arr.length; i++) {
 			System.out.printf("%d번 학생의 키 : %.1fcm\n", i+1, arr[i]);
-			sum += arr[i];
 			
+			sum += arr[i]; //반복문 돌때마다 sum 에 더해준다
+		}	
 		// 4. 평균 키 출력
 			
-			System.out.printf("평균키 : %.2f", sum/arr.length);
-			
-			
-		}
+		System.out.printf("평균키 : %.2f", sum/arr.length); //arr.length(3 이랑 같으니까)
 		
 	}
 	public void method11() {
