@@ -159,7 +159,7 @@ public class A_Array {
 		// 주소값을 담는 레퍼런스 변수의 기본값은 null
 		
 //		System.out.println(arr);
-//		System.out.println(arr.length);
+//		System.out.println(arr.length); (null. 으로 인식 된것)
 //		System.out.println(arr.hashCode());
 //		System.out.println(arr[0]); 
 //		// 생성을 하지않고 null인 상태에서 메소드 호출이나 무언가에 접근했을 때 뜨는 오류
@@ -380,5 +380,23 @@ public class A_Array {
 		
 		System.out.println("홀수들의 총 합 : " + sum);
 	}
-				
+	
+	public void remind() {
+		int[]ages = new int[3];
+		
+		Scanner sc = new Scanner(System.in);
+		for(int i=0; i<ages.length;i++) {
+			System.out.print("나이 입력 : ");
+			ages[i] = sc.nextInt();
+			
+	}
+		int sum = 0;
+		for(int i = 0; i<ages.length;i++) {
+			System.out.println(ages[i]);
+			sum += ages[i];
+			
+		}
+		System.out.println("총 합 : " + sum);
+		System.out.println("평균나이 : " + (double) sum/ages.length);
+	}	
 }

@@ -1,10 +1,11 @@
 package com.br.homework.view;
-
+import com.br.homework.controller.Function;
 import java.util.Scanner;
 
 public class Menu {
 	
 	public void displayMenu() {
+		Function f = new Function();
 		while(true) {
 			
 		System.out.println("1. 간단 계산기");
@@ -20,17 +21,22 @@ public class Menu {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("메뉴 번호 : ");
 		int menu = sc.nextInt();
-		
-		if(menu>0 && menu<=9) {
+				
+			switch(menu) {
+			case 1: f.calculator(); break;
+			case 2: f.totalCalculator(); break;
+			case 3: f.printProfile(); break;
+			case 4: f.printScore(); break;
+			case 5: f.printStarNumber(); break;
+			case 6: f.sumRandom(); break;
+			case 7: f.exceptGugu(); break;
+			case 8: f.diceGame(); break;
+			case 9: System.out.println("종료합니다."); return;
+			default : System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.\n"); 
+			}
 			
-			//메뉴번호 function에서 호출, 9번 입력시 종료합니다 호출 후 종료
-			
-		}else {
-			System.out.println("잘못 입력하셨습니다. 다시 입력해주세요.");
-		}
-		
-		}
+		}//while
 		
 	}
-
-}
+	
+}//끝
