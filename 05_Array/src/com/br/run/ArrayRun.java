@@ -21,10 +21,10 @@ public class ArrayRun {
 		
 		B_ArrayCopy b = new B_ArrayCopy();
 		//b.method1();
-		b.method2();
-		//b.method3();
-		//b.method4();
-		//b.method5();
+		//b.method2();
+		b.method3();
+		b.method4();
+		b.method5();
 		
 		
 	}

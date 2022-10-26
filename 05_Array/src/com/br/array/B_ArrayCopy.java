@@ -1,6 +1,7 @@
 package com.br.array;
 
-import java.util.Arrays; //-> 알게모르게 포함되어있음
+import java.util.Arrays; 
+//import java.lang.*;=> 알게모르게 포함되어있음 => java.lang패키지 클래스들은 직접 import할 필요 없음
 
 public class B_ArrayCopy {
 	
@@ -37,14 +38,14 @@ public class B_ArrayCopy {
 		}
 		System.out.println();
 		
-		
+		// origin과 copy가 같은 참조하하고 있음 (즉, 같은 주소값)
 		System.out.println ("origin의 주소값 :" + origin.hashCode());
 		System.out.println("copy의 주소값 :" + copy.hashCode());
-		
+		// 주소값만을 복사하는 것 = 얕은 복사
 	}
 	
 	public void method2( ) {
-		//깊은 복사방법 1.for문 활용한 방법
+		//깊은 복사방법 1.for문 활용한 방법 
 		// 	새로운 배열을 생성한 후 반복문을 활용해서
 		// 	원본배열의 각 인덱스 값을 새로운 배열에 대입
 		
@@ -86,8 +87,8 @@ public class B_ArrayCopy {
 			
 			// System.arraycopy(원본배열명, 복사를 시작할 인덱스, 복사본 배열명, 복사본 배열의 복사될 시작 인덱스, 복사할 개수);
 			
-			System.arraycopy (origin, 3, copy ,5, origin.length);
-			
+			//System.arraycopy (origin,0,copy,0,origin.length);
+			System.arraycopy (origin,2,copy,5,3);
 			for (int i =0; i < copy.length;i++) {
 				System.out.print(copy[i] + " ");
 			}
@@ -101,7 +102,7 @@ public class B_ArrayCopy {
 		public void method4() { 
 			//깊은 복사 방법3. Arrays 클래스에서 제공하는 copyOf 메소드 이용방법
 			int[] origin = {1,2,3,4,5};
-			/// 복사볼배열 = Arrays.copyOf(원본배열명, 복사할 길이)
+			/// 복사본배열 = Arrays.copyOf(원본배열명, 복사할 길이)
 			int[]copy  = Arrays .copyOf(origin, 5);  //인덱스를 지정할수 있냐없냐의 차이
 			/*
 			 * 내가 제시한 길이 만큼의 새로운 배열 생성
