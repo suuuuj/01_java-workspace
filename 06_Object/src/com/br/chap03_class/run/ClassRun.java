@@ -33,11 +33,11 @@ public class ClassRun {
 		
 		System.out.println("========================================");
 		
-		Product p = new Product();
+		Product p = new Product("아이폰", 1800000,"애플");
 		
-		p.setpName ("아이폰");
-		p.setPrice (180000);
-		p.setBrand ("애플");
+//		p.setpName ("아이폰");
+//		p.setPrice (180000);
+//		p.setBrand ("애플");
 		
 		System.out.println(p.information());
 	}

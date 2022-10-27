@@ -10,6 +10,20 @@ public class Product {
 	private int price;
 	private String brand;
 	
+	//기본생성자
+	
+	public Product() {
+	
+	}
+	
+	//매개변수 생성자
+	
+	public Product(String pName, int price, String brand) {
+		this.pName=pName;
+		this.price=price;
+		this.brand=brand;
+	}
+	
 	/* 둘 다 안되는 표현
 	public void setPName(String pName)
 	public void setPname(String pName) {
@@ -42,7 +56,7 @@ public class Product {
 	}
 	
 	public String information() {
-		return "pName : " + pName + "\nprice : " + price + "\nbrand : " + brand;
+		return "상품명 : " + pName + "\n가격 : " + price + "\n브랜드 : " + brand;
 	}
 
 }
