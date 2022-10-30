@@ -62,7 +62,7 @@ public class Abstraction {
 
 	public static void main(String[] args) {
 		
-		//자바에서의 객체로 만들기 위해서는 new 라는 키워드를 이용해서 heap영영게 생성
+		//자바에서의 객체로 만들기 위해서는 new 라는 키워드를 이용해서 heap영역에 생성
 		
 		int[]arr = new int[3];
 		arr[0] = 10;

@@ -3,7 +3,7 @@ package com.br.chap03_class.model.vo;
 public class Product {
 	//클래스 선언구문에 작성가능한 접근제한자(public, default(아무것도 안썼을때))
 	//public으로 하면 같은 패키지내에서든 다른 패키지에서든 해당 이클래스를 사용가능
-	//default으로 하면 같은 패키지 내에서만 사용가능(다른 패키지에서는 사용불가)
+	//default으로 하면 같은 패키지 내에서만 사용가능(다른 패키지에서는 사용불가-run 패키지에서 import 할스없음)
 	
 	
 	private String pName;

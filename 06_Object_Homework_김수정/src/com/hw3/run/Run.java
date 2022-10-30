@@ -7,8 +7,11 @@ public class Run {
 	public static void main(String[] args) {
 		
 		Function f = new Function();
-		f.printLottoNumbers();
-
+		//f.printLottoNumbers();
+		//f.outputChar(3,'a');
+		
+		System.out.println(f.alphabette());
+		
 	}
 
 }
