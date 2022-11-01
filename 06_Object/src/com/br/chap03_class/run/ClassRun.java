@@ -21,13 +21,13 @@ public class ClassRun {
 		kim.setPhone("010-8890-0730"); //굳이 담고 싶지 않으면 안담아도 됨 (적지 않아도 됨)
 		kim.setEmail("sj25054@naver.com");
 		
-//		System.out.println(kim.getId());
-//		System.out.println(kim.getPwd());
-//		System.out.println(kim.getName());
-//		System.out.println(kim.getAge());
-//		System.out.println(kim.getGender());
-//		System.out.println(kim.getPhone());
-//		System.out.println(kim.getEmail());
+		System.out.println(kim.getId());
+		System.out.println(kim.getPwd());
+		System.out.println(kim.getName());
+		System.out.println(kim.getAge());
+		System.out.println(kim.getGender());
+		System.out.println(kim.getPhone());
+		System.out.println(kim.getEmail());
 		
 		System.out.println(kim.information());
 		

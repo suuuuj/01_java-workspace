@@ -30,13 +30,13 @@ public class FieldTest1 { //클래스 영역 시작
 		
 		int local = 100; //초기값을 넣는 습관을 드ㄹ이자
 				; 
-		//멤버변수 => 이 객체 생성시 jvn이 기본값으로라도 초기화
+		//멤버변수 => 이 객체 생성시 jvm이 기본값으로라도 초기화
 		System.out.println(global);
-		//매개변수=> 어차피 미 메소드 호출시 잢이 전달외어 올꺼기 때문에 초기화 되어있음
+		//매개변수=> 어차피 이 메소드 호출시 값이 전달되어 올꺼기 때문에 초기화 되어있음
 		System.out.println(num);
 		//지역변수 => 내가 초기화를 직접하지않으면 텅 빈 상태
 		System.out.print(local);
-		
+		 
 		FieldTest2 ft2 = new FieldTest2();
 		
 		System.out.println(ft2.pub);

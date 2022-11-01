@@ -41,18 +41,18 @@ public class MethodRun {
 			System.out.println("부적절한 정수를 입력하셨습니다.");
 			
 		}
-//		MethodTest2.method1();
-//		//int sum = MethodTest2.method2();
-//		System.out.println(MethodTest2.method2());
-//		MethodTest2.method3("강보람");
-//		System.out.println(MethodTest2.method4("홍길동", "홍길동"));
-//		
-//		OverloadingTest ot = new OverloadingTest();
-//		ot.test();
-//		ot.test(20);
-//		ot.test(30, "ㅎㅎㅎ");
-//		ot.test("ㅋㅋㅋ",30);
-//		ot.test(10,20);
+		MethodTest2.method1();
+		//int sum = MethodTest2.method2();
+		System.out.println(MethodTest2.method2());
+		MethodTest2.method3("강보람");
+		System.out.println(MethodTest2.method4("홍길동", "홍길동"));
+		
+		OverloadingTest ot = new OverloadingTest();
+		ot.test();
+		ot.test(20);
+		ot.test(30, "ㅎㅎㅎ");
+		ot.test("ㅋㅋㅋ",30);
+		ot.test(10,20);
 		
 	}
 	// 오버로딩의 대표적인 ㅇㅖ = > 출력문

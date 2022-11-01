@@ -50,6 +50,6 @@ public class MethodTest1 {
 		
 		return str.charAt(index);	
 	}
-	
+	 
 	
 }
