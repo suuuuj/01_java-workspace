@@ -84,7 +84,10 @@ public class Employee {
 		return address;
 	}
 	public String information () {
-		return "";
+		return "사원명: " + empName + "\n부서명: " + dept + "\n직급: " + job
+				+"\n나이: " + age + "\n성별" + gender + "\n급여: " + salary
+				+ "\n보너스포인트: " + bonusPoint + "\n휴대폰 번호: " + phone + 
+				"\n주소: " + address;
 	}
 
 }
