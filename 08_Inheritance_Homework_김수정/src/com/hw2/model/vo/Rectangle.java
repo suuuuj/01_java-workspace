@@ -20,7 +20,18 @@ public class Rectangle extends Point{
 		this.height=height;
 	}
 	
-	//public int getW
+	public int getWidth() {
+		return width;
+	}
 	
+	public int getHeight() {
+		return height;
+	}
+	
+	public void draw() {
+		super.draw();
+		System.out.println ("면적 : " + width * height );
+		System.out.println("둘레 : " + 2*(width + height));
+	}	
 
 }

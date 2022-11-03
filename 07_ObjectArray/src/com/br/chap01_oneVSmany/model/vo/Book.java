@@ -16,7 +16,7 @@ public class Book {
 	
 	//매개변수생성자(모든 필드를 다 초기화할 수 있는 매개변수 4개짜리)
 	public Book(String title, String author, int price, String publisher) {
-		this.title = title;
+		this.title = title; //필드명과 매개변수명이 동일함으로 this를 붙여 필드명을 가리킴
 		this.author=author;
 		this.price=price;
 		this.publisher=publisher;

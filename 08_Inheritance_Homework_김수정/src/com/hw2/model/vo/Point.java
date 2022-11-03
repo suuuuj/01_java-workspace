@@ -30,6 +30,7 @@ public class Point {
 	}
 	
 	public void draw() {
+		System.out.println("(x,y) : ("+ x + ", " + y + ")");
 	}
-
 }
+	
