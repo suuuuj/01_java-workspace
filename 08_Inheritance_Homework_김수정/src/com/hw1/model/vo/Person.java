@@ -39,7 +39,7 @@ public class Person {
 	}
 	
 	public String toString() {
-		return "age:" + age + ", height:" + height + ", weight" + weight;
+		return "name:" + name + ", age:" + age + ", height:" + height + ", weight:" + weight;
 	}
 
 }

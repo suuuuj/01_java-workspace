@@ -4,16 +4,12 @@ public class Student extends Person {
 	private int grade;
 	private String major;
 	
-	public Student() {
-		
-	}
+	public Student() {}
 	
 	public Student(String name, int age, double height, double weight, int grade, String major) {
 		super(age, height, weight);
-		
-		Person p = new Person();
-		p.name="";
-		
+		super.name = name;  // protected(상속관계 직접접근 가능) 이기 때문에 부모 필드 값에 직접 접근해서 초기화
+			
 		this.grade=grade;
 		this.major=major;
 	}
@@ -33,9 +29,9 @@ public class Student extends Person {
 		return major;
 	}
 	
-	
+	@Override
 	public String toString() {
-		return "name:" + name  + ", age:" + super.getAge() + ", height:" + super.getHeight() + ", weight:" + super.getWeight() + ", grade:" + grade + ", major:" + major; 
+		return super.toString() + ", grade:" + grade + ", major:" + major; 
 	}
 
 }

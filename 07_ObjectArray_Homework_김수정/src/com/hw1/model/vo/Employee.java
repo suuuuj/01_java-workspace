@@ -13,9 +13,7 @@ public class Employee {
 	private String phone;
 	private String address;
 	
-	public Employee() {
-		
-	}
+	public Employee() {}
 	
 	public Employee(int empNo, String empName, int age, char gender, String phone,String address) {
 		this.empNo = empNo;
@@ -60,7 +58,7 @@ public class Employee {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
-	public void setbonusPoint(double bonusPoint) {
+	public void setBonusPoint(double bonusPoint) {
 		this.bonusPoint = bonusPoint;
 	}
 	public void setPhone (String phone) {
@@ -91,7 +89,7 @@ public class Employee {
 	public int getSalary() {
 		return salary;
 	}
-	public double getbonusPoint() {
+	public double getBonusPoint() {
 		return bonusPoint;
 	}
 	public String getPhone() {
