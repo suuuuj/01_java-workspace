@@ -28,7 +28,7 @@ public abstract class Animal {
 		return kinds;
 	}
 	
-	
+	@Override
 	public String toString() {
 		return "저의 이름은 " + name + "이고, 종류는 " + kinds + "입니다.";
 	}

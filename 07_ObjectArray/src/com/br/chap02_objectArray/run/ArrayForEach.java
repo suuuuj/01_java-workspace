@@ -57,7 +57,8 @@ public class ArrayForEach {
 		
 		for (Phone p : phones) {
 			if(p.getName().equals(buy))
-				System.out.println ("당신이 구매하고자 하는 폰 : " + buy);
+				System.out.println ("당신이 구매하고자 하는 " + buy + " 핸드폰의 가격은 " + p.getPrice() + "원 입니다." );
+				count++;
 		}
 		if(count==0) {
 			System.out.println("저희 가게에서 파는 핸드폰이 아닙니다. ");
