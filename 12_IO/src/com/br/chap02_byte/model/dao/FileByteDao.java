@@ -56,8 +56,7 @@ public class FileByteDao {
 		} catch (IOException e) { //FileNotFoundExceotion의 부모 그러므로 file~ 어쩌고는 지워도됨
 			e.printStackTrace();
 		} finally { // 이 안에 작성된 코드는 어떤 예외가 발생하든간에 마지막에 무조건 실행되고 빠져나감
-			
-			// 3. 스트림 반납하기 (반드시 실행되어야한다)
+			// 3. finally 안에 스트림 반납하기 (반드시 실행되어야한다)
 			try {
 				fout.close();
 			} catch (IOException e) {
