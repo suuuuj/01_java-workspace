@@ -23,8 +23,18 @@ public class BookController {
 		 *    (단, 객체 생성 시  유의사항 :장르 번호별로 조건식 이용해서 장르번호가 아닌 장르명을 전달하면서 생성!)
 		 * 2. bookList에 1번과정에서 생성된 Book객체 추가
 		 */
-	
 		
+		String str = "";
+		
+		switch(category) { 
+		case 1: str = "인문"; break;
+		case 2: str = "자연과학"; break;
+		case 3: str = "의료"; break;
+		case 4: str = "기타"; break;
+		}
+		
+		bookList.add(new Book(title, author, str , price));
+        
 	}
 	
 	
@@ -33,7 +43,7 @@ public class BookController {
 		 * 1. 해당 bookList 반환
 		 */
 		
-		return null; 	// 이 부분 수정해야되요~! 우선은 null로 해놨어요
+		return bookList; 	
 	}
 	
 	
@@ -46,7 +56,16 @@ public class BookController {
 		 * 3. searchList 반환
 		 */
 		
-		return null;   // 이 부분 수정해야되요~! 우선은 null로 해놨어요
+		ArrayList<Book> searchList = new ArrayList<Book>();
+		
+		for(int i=0; i<bookList.size();i++) {
+			if(bookList.get(i).getTitle().contains(keyword)){
+				searchList.add(bookList.get(i));
+			}
+		}
+		
+		
+		return searchList;  // 이 부분 수정해야되요~! 우선은 null로 해놨어요
 	}
 	
 	public int deleteBook(String title, String author) {
@@ -59,10 +78,14 @@ public class BookController {
 		 * 3. result 값 반환
 		 */
 		
-		return 0;   // 이 부분 수정해야되요~! 우선은 0으로 해놨어요
+		int result = 0;
+		for(int i=0 ; i<bookList.size();i++) {
+			if(title.equals(bookList.get(i).getTitle()) && author.equals(bookList.get(i).getAuthor())){
+				bookList.remove(i);
+				result++;
+			}
+		}
+		return result;   
 	}
-	
-	
-	
 	
 }

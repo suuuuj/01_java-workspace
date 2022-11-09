@@ -17,7 +17,10 @@ public class FileDao {
 	
 	
 	public void fileSave() {
+		StringBuilder sb = new StringBuilder();
 		System.out.print("파일에 저장할 내용을 입력하시오(exit를 입력시 내용입력 끝) : ");
+		
+		
 		while(true) {
 			String str = sc.nextLine();
 			if(!str.equals("exit")) {

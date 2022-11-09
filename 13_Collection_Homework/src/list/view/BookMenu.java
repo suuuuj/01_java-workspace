@@ -1,8 +1,10 @@
 package list.view;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import list.controller.BookController;
+import list.model.vo.Book;
 
 public class BookMenu {
 	
@@ -14,7 +16,7 @@ public class BookMenu {
 		System.out.println("== Welcome BR Library ==");
 		
 		while(true) {
-			System.out.println("===== 메인 메뉴 ====");
+			System.out.println("\n===== 메인 메뉴 ====");
 			System.out.println("1. 새 도서 추가");
 			System.out.println("2. 도서 전체 조회");
 			System.out.println("3. 도서 검색 조회");
@@ -63,8 +65,11 @@ public class BookMenu {
 		System.out.print("4. 가격 입력 : ");
 		int price = sc.nextInt();
 		
-		bc.insertBook(title, author, category, price);
-		//System.out.printf("도서명 : %s\n저자명 : %s\n장르 : %d\n ");
+		
+		bc.insertBook(title, author, category , price);
+		System.out.println("성공적으로 도서를 추가하였습니다.");
+		
+		//System.out.printf("Book [title=%s, author=%s, category=%s, price=%d",title, author,category,price);
 		
 		// 위의 순서대로 작성해보세용 ~ 찡긋^^
 	}
@@ -81,6 +86,18 @@ public class BookMenu {
 		 * 2_2. bookList가 "비어있지 않은 경우" -->   반복문을 통해 bookList 안의 Book 객체들 출력
 		 * 
 		 */
+		
+		System.out.println("\n=== 도서 전체 조회 ===");
+		ArrayList<Book> bookList = bc.selectList();
+		
+		if(bookList.isEmpty()) {
+			System.out.println("존재하는 도서가 없습니다.");
+		}else {
+			for(int i=0; i<bookList.size();i++) {
+				System.out.println(bookList.get(i));
+			}
+		}
+		
 		
 		// 위의 순서대로 작성해보세요 ~ 화이팅^^
 	}
@@ -101,6 +118,22 @@ public class BookMenu {
 		 * 3_2. searchList가 "비어있지 않은 경우" -->  반복문을 통해 searchList 안의 Book 객체들 출력
 		 * 
 		 */
+		System.out.println("\n=== 도서 검색 조회 ===");
+		
+		System.out.print("검색할 키워드 입력 : ");
+		String keyword = sc.nextLine();
+		
+		ArrayList<Book> searchList = bc.searchBook(keyword);
+	
+		System.out.println("\n=== 검색 결과 ===");
+		if(searchList.isEmpty()) {
+			System.out.println("검색된 결과가 없습니다.");
+		}else {
+			for(Book b: searchList) {
+				System.out.println(b);
+			}
+		}
+		
 		
 		// 위의 순서대로 작성해보세요 ~ 얼마 안남았어요~!!
 	}
@@ -124,6 +157,21 @@ public class BookMenu {
 		 * 4_2. result가 0일 경우    	  -->  "삭제할 도서를 찾지 못했습니다." 라는 알람 문구 출력
 		 *  
 		 */
+		System.out.println("\n=== 도서 삭제하기 ===");
+		
+		System.out.print("삭제할 도서명 입력 : ");
+		String title = sc.nextLine();
+		
+		System.out.print("삭제할 저자명 입력 : ");
+		String althor = sc.nextLine();
+		
+		int result = bc.deleteBook(title, althor);
+		
+		if(result>0) {
+			System.out.println("성공적으로 도서가 삭제되었습니다.");
+		}else {
+			System.out.println("삭제할 도서를 찾지 못햇습니다.");
+		}
 		
 		// 위의 순서대로 작성해보세요 ~ 이제 거의 끝났어요~!!
 	}
