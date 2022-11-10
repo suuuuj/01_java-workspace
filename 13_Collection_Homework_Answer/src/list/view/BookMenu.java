@@ -16,7 +16,7 @@ public class BookMenu {
 		System.out.println("== Welcome BR Library ==");
 		
 		while(true) {
-			System.out.println("\n===== 메인 메뉴 ====");
+			System.out.println("===== 메인 메뉴 ====");
 			System.out.println("1. 새 도서 추가");
 			System.out.println("2. 도서 전체 조회");
 			System.out.println("3. 도서 검색 조회");
@@ -51,25 +51,20 @@ public class BookMenu {
 		 * 5. bc(BookController)의 insertBook메소드 호출하면서 위의 내용들 전달
 		 */
 		
-		System.out.println("\n=== 새 도서 추가 ===");
-		
-		System.out.print("1. 도서명 입력 : ");
+		// 1번 ~ 4번 과정
+		System.out.print("도서명 : ");
 		String title = sc.nextLine();
-		
-		System.out.print("2. 저자명 입력 : ");
+		System.out.print("저자명 : ");
 		String author = sc.nextLine();
-		
-		System.out.print("3. 장르 입력 (숫자로 입력)\n(1.인문 / 2.자연과학 / 3.의료 / 4.기타 ) : ");
+		System.out.print("장르번호(1.인문 / 2.자연과학 / 3.의료 / 4.기타) : ");
 		int category = sc.nextInt();
-		
-		System.out.print("4. 가격 입력 : ");
+		System.out.print("가격 : ");
 		int price = sc.nextInt();
 		
+		// 5번 과정
+		bc.insertBook(title, author, category, price);
 		
-		bc.insertBook(title, author, category , price);
-		System.out.println("성공적으로 도서를 추가하였습니다.");
-		
-		// 위의 순서대로 작성해보세용 ~ 찡긋^^
+		System.out.println("성공적으로 추가되었습니다.");
 	}
 	
 	
@@ -85,19 +80,17 @@ public class BookMenu {
 		 * 
 		 */
 		
-		System.out.println("\n=== 도서 전체 조회 ===");
+		// 1번 과정
 		ArrayList<Book> bookList = bc.selectList();
 		
+		// 2번 과정
 		if(bookList.isEmpty()) {
 			System.out.println("존재하는 도서가 없습니다.");
 		}else {
-			for(int i=0; i<bookList.size();i++) {
-				System.out.println(bookList.get(i));
+			for(int i=0; i<bookList.size(); i++) {
+				System.out.println(bookList.get(i));				
 			}
 		}
-		
-		
-		// 위의 순서대로 작성해보세요 ~ 화이팅^^
 	}
 	
 	
@@ -116,24 +109,22 @@ public class BookMenu {
 		 * 3_2. searchList가 "비어있지 않은 경우" -->  반복문을 통해 searchList 안의 Book 객체들 출력
 		 * 
 		 */
-		System.out.println("\n=== 도서 검색 조회 ===");
 		
-		System.out.print("검색할 키워드 입력 : ");
+		// 1번 과정
+		System.out.print("검색할 도서명 키워드 : ");
 		String keyword = sc.nextLine();
 		
+		// 2번 과정
 		ArrayList<Book> searchList = bc.searchBook(keyword);
-	
-		System.out.println("\n=== 검색 결과 ===");
+		
+		// 3번 과정
 		if(searchList.isEmpty()) {
-			System.out.println("검색된 결과가 없습니다.");
+			System.out.println("검색 결과가 없습니다.");
 		}else {
-			for(Book b: searchList) {
-				System.out.println(b);
+			for(int i=0; i<searchList.size(); i++) {
+				System.out.println(searchList.get(i));
 			}
 		}
-		
-		
-		// 위의 순서대로 작성해보세요 ~ 얼마 안남았어요~!!
 	}
 	
 	
@@ -155,23 +146,22 @@ public class BookMenu {
 		 * 4_2. result가 0일 경우    	  -->  "삭제할 도서를 찾지 못했습니다." 라는 알람 문구 출력
 		 *  
 		 */
-		System.out.println("\n=== 도서 삭제하기 ===");
 		
-		System.out.print("삭제할 도서명 입력 : ");
+		// 1번 ~ 2번 과정
+		System.out.print("삭제할 도서명 : ");
 		String title = sc.nextLine();
+		System.out.print("삭제할 저자명 : ");
+		String author = sc.nextLine();
 		
-		System.out.print("삭제할 저자명 입력 : ");
-		String althor = sc.nextLine();
+		// 3번 과정
+		int result = bc.deleteBook(title, author);
 		
-		int result = bc.deleteBook(title, althor);
-		
-		if(result>0) {
-			System.out.println("성공적으로 도서가 삭제되었습니다.");
+		// 4번 과정
+		if(result == 1) {
+			System.out.println("성공적으로 삭제되었습니다.");
 		}else {
-			System.out.println("삭제할 도서를 찾지 못햇습니다.");
+			System.out.println("삭제할 도서를 찾지 못했습니다.");
 		}
-		
-		// 위의 순서대로 작성해보세요 ~ 이제 거의 끝났어요~!!
 	}
 	
 

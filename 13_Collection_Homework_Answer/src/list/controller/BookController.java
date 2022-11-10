@@ -24,18 +24,20 @@ public class BookController {
 		 * 2. bookList에 1번과정에서 생성된 Book객체 추가
 		 */
 		
-		String str = "";
+		// 1번 과정.
+		String categoryStr = "";
 		
-		switch(category) { 
-		case 1: str = "인문"; break;
-		case 2: str = "자연과학"; break;
-		case 3: str = "의료"; break;
-		case 4: str = "기타"; break;
+		switch(category) {
+		case 1: categoryStr = "인문"; break;
+		case 2: categoryStr = "자연과학"; break;
+		case 3: categoryStr = "의료"; break;
+		case 4: categoryStr = "기타"; break;
 		}
-		//Book 객체 생성
-		Book bk = new Book(title, author, str , price);
+		
+		Book bk = new Book(title, author, categoryStr, price);
+		
+		// 2번 과정.
 		bookList.add(bk);
-        
 	}
 	
 	
@@ -57,16 +59,18 @@ public class BookController {
 		 * 3. searchList 반환
 		 */
 		
-		ArrayList<Book> searchList = new ArrayList<Book>();
+		// 1번 과정
+		ArrayList<Book> searchList = new ArrayList<>();
 		
-		for(int i=0; i<bookList.size();i++) {
-			if(bookList.get(i).getTitle().contains(keyword)){
+		// 2번 과정
+		for(int i=0; i<bookList.size(); i++) {
+			if(bookList.get(i).getTitle().contains(keyword)) {
 				searchList.add(bookList.get(i));
 			}
 		}
 		
-		
-		return searchList;  // 이 부분 수정해야되요~! 우선은 null로 해놨어요
+		// 3번 과정
+		return searchList;
 	}
 	
 	public int deleteBook(String title, String author) {
@@ -79,14 +83,43 @@ public class BookController {
 		 * 3. result 값 반환
 		 */
 		
+		// 1번 과정
 		int result = 0;
-		for(int i=0 ; i<bookList.size();i++) {
-			if(title.equals(bookList.get(i).getTitle()) && author.equals(bookList.get(i).getAuthor())){
+		
+		// 2번 과정_단순 for문 사용하기
+		/* ---------------------------------------------
+		for(int i=0; i<bookList.size(); i++) {
+		
+			Book bk = bookList.get(i); // 먼저 해당 객체를 bk에 담아둬도 된다. 
+			
+			if(bk.getTitle().equals(title) && bk.getAuthor().equals(author)) {
 				bookList.remove(i);
-				result++;
+				result = 1;
+				break; // 해당 도서를 삭제하고 궂이 반복문 더이상 실행시킬 필요 없기 때문에 빠져나가기
 			}
 		}
-		return result;   
+		-----------------------------------------------*/
+		
+		// 2번 과정_for each문 사용하기 (권장x)
+		for(Book bk : bookList) {
+			
+			if(bk.getTitle().equals(title) && bk.getAuthor().equals(author)) {
+				bookList.remove(bk); // remove 메소드 사용시 해당 인덱스를 보내는 것 말고 해당 객체를 전달해서 지워줄 수도 있다!
+				result = 1;
+				break; // 위의 단순 for문 방식과 비슷하게 생각하면 큰 오산 --> for each문 사용할때는 꼭 break를 통해 빠져나가줘야된다. 
+					   // 왜냐면 위의 반복문 기입에 bookList를 작성하게 되면 기존에 리스트의 size()가 처음에 5였다면 무조건 5번 반복한다. 
+					   // 따라서 값을 삭제하고 나서도 남아있는 반복 실행을 하기 때문에 발생하는 문제 
+					   // --> 값을 삭제하려는 순간 ConcurrentModificationException 예외가 발생할 수 있다. 
+					   // List를 순회하는 for each문을 통해 삭제하는 과정을 하게 되면 종종 볼 수 있는 예외이다.
+					   // 즉, 여러분들은 for each문은 단순히 전체 조회할 때만 쓰도록 합시다!
+			}
+		}
+		
+		// 3번 과정
+		return result; 
 	}
+	
+	
+	
 	
 }
