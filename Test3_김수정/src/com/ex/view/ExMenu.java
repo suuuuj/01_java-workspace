@@ -15,10 +15,10 @@ public class ExMenu {
 		while(true) {
 			System.out.println("\n== Welcome 만물상 ==");
 			System.out.println("1. 전체 제품 조회");
-			System.out.println("2. 새 제품 추가"); //ㅇ
+			System.out.println("2. 새 제품 추가");
 			System.out.println("3. 제품 삭제");
 			System.out.println("4. 제품명으로 키워드 검색");
-			System.out.println("5. 특정 제품 가격만 조회");//ㅇ
+			System.out.println("5. 특정 제품 가격만 조회");
 			System.out.println("0. 프로그램 종료");
 			System.out.print(">> 메뉴선택 : ");
 			int menu = sc.nextInt();
